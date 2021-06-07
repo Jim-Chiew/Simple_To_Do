@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         list = new ArrayList<String>();
 
-        btnDelete.setClickable(false);
+        btnDelete.setEnabled(false);
 
         ArrayAdapter show  = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
         lvOutput.setAdapter(show);
@@ -72,13 +72,13 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
-                        btnAdd.setClickable(true);
-                        btnDelete.setClickable(false);
+                        btnAdd.setEnabled(true);
+                        btnDelete.setEnabled(false);
                         etInput.setHint("Enter a Event to Add");
                         break;
                     case 1:
-                        btnAdd.setClickable(false);
-                        btnDelete.setClickable(true);
+                        btnAdd.setEnabled(false);
+                        btnDelete.setEnabled(true);
                         etInput.setHint("Enter a position to Delete");
                         break;
                 }
