@@ -3,6 +3,7 @@ package sg.edu.rp.c346.id20004713.simpletodo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -75,11 +76,13 @@ public class MainActivity extends AppCompatActivity {
                         btnAdd.setEnabled(true);
                         btnDelete.setEnabled(false);
                         etInput.setHint("Enter a Event to Add");
+                        etInput.setInputType(InputType.TYPE_CLASS_TEXT);
                         break;
                     case 1:
                         btnAdd.setEnabled(false);
                         btnDelete.setEnabled(true);
                         etInput.setHint("Enter a position to Delete");
+                        etInput.setInputType(InputType.TYPE_CLASS_NUMBER);
                         break;
                 }
             }
@@ -108,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         lvOutput.setOnItemClickListener(new AdapterView.OnItemClickListener() {  //when in deleting mode. user can click on a event and it add the position to Edit text view
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (btnDelete.isClickable()){
+                if (btnDelete.isEnabled()){
                     etInput.setText("" + (position + 1));
                 }
             }
