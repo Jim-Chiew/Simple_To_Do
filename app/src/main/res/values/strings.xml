@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Simple To Do</string>
+    <string name="enter_a_event">Enter a Event to Add</string>
+    <string name="add">ADD</string>
+    <string name="clear">Clear</string>
+    <string name="Wraning_enter_event">Please enter a event</string>
+    <string name="Wraning_Cleared">All Event Cleared</string>
+    <string name="delete">DELETE</string>
+    <string name="Warning_number">Enter a proper number within list and greater than 0</string>
+    <string name="Warning_nothing_to_remove">You don\'t have any task to remove</string>
+
+    <string-array name="spinnerItems">
+        <item>Add a new task</item>
+        <item>remove a task</item>
+    </string-array>
+</resources>
